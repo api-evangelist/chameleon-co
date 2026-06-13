@@ -1,0 +1,98 @@
+name: Chameleon Plans and Pricing
+description: Pricing tiers for Chameleon in-product guidance platform, based on Monthly Tracked Users (MTUs)
+specificationVersion: "0.1"
+url: https://www.chameleon.io/pricing
+
+plans:
+  - name: Startup
+    description: For small teams with big goals. Includes core in-app guidance features with a base MTU allowance.
+    price:
+      amount: 333
+      currency: USD
+      period: month
+      annualBilling: true
+      annualTotal: 4000
+    seats: 6
+    features:
+      - Unlimited Tours
+      - Unlimited Tooltips
+      - 5 Microsurveys
+      - 1 Launcher
+      - Custom CSS
+      - Copilot Agent
+      - 5 Tracked Events
+      - 2 Environments
+      - Basic segmentation
+      - JavaScript API access
+      - REST API access
+      - Webhooks
+    limits:
+      MTUs: 2000
+      environments: 2
+      microsurveys: 5
+      launchers: 1
+      trackedEvents: 5
+      seats: 6
+
+  - name: Growth
+    description: For scaling teams that move fast. Adds A/B testing, advanced integrations, and unlimited experiences.
+    price:
+      amount: null
+      currency: USD
+      period: month
+      annualBilling: true
+      note: Pricing available on request; typically starts from $999/month
+    seats: 15
+    features:
+      - All Startup features
+      - All Experiences Unlimited
+      - AI Interactive Demos
+      - A/B Testing
+      - Governance Suite
+      - Customer Success support
+      - Segment integration
+      - Amplitude integration
+      - Mixpanel integration
+      - Advanced segmentation
+      - Rate Limit Groups
+      - 20 Tracked Events
+      - 4 Environments
+    limits:
+      environments: 4
+      trackedEvents: 20
+      seats: 15
+
+  - name: Enterprise
+    description: For teams requiring total control, security, and unlimited scale. Custom pricing based on MTUs and requirements.
+    price:
+      amount: null
+      currency: USD
+      period: month
+      note: Custom pricing — contact sales
+    seats: unlimited
+    features:
+      - All Growth features
+      - Unlimited Seats
+      - Roles and Permissions
+      - Localization
+      - Account-switching
+      - Dedicated Customer Success Manager
+      - Custom SLAs
+      - Advanced security controls
+      - 50 Tracked Events
+      - Unlimited Environments
+      - Single Sign-On (SSO)
+    limits:
+      environments: unlimited
+      trackedEvents: 50
+      seats: unlimited
+
+  - name: Free Trial
+    description: 14-day free trial available for evaluating the platform before committing to a paid plan.
+    price:
+      amount: 0
+      currency: USD
+      period: trial
+    trialDays: 14
+    features:
+      - Full platform access during trial period

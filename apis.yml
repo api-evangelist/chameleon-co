@@ -1,0 +1,117 @@
+aid: chameleon-co
+name: Chameleon
+description: >
+  Chameleon is an in-product guidance platform that enables product and growth teams to
+  build, manage, and optimize onboarding tours, tooltips, modals, launchers, and
+  microsurveys without engineering effort. Its REST API and JavaScript SDK allow teams
+  to programmatically manage experiences, target users by segment, trigger tours from
+  custom events, and retrieve engagement analytics and survey responses. Webhooks
+  provide real-time event delivery when users interact with any Chameleon experience.
+  The platform scales across Startup, Growth, and Enterprise plans based on Monthly
+  Tracked Users (MTUs), with deep integrations for Segment, Amplitude, Mixpanel,
+  and other product analytics tools.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/chameleon-co/refs/heads/main/apis.yml
+created: 2026-06-13
+modified: 2026-06-13
+specificationVersion: "0.19"
+tags:
+  - Product Tours
+  - In-Product Guidance
+  - User Onboarding
+  - Tooltips
+  - Modals
+  - Microsurveys
+  - Digital Adoption
+  - SaaS
+  - Product Analytics
+  - User Engagement
+
+apis:
+  - name: Chameleon REST API
+    description: >
+      RESTful API for managing Chameleon experiences including Tours, Tooltips,
+      Launchers, Microsurveys, and Embeddables. Supports user profile management,
+      segmentation, experience delivery, survey response retrieval, and webhook
+      configuration. Authenticates via account secret token passed as a header,
+      query parameter, or request body field.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developers.chameleon.io/introduction
+    baseURL: https://api.chameleon.io
+    tags:
+      - REST
+      - Product Tours
+      - Microsurveys
+      - Segmentation
+      - Webhooks
+    properties:
+      - type: Documentation
+        url: https://developers.chameleon.io/introduction
+      - type: Authentication
+        url: https://developers.chameleon.io/concepts/authentication
+
+  - name: Chameleon JavaScript API
+    description: >
+      Client-side JavaScript SDK for identifying users, tracking custom events,
+      triggering experiences programmatically, and passing personalization variables
+      to Chameleon from the browser. Enables single-page app integration and custom
+      event-based experience triggering.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developers.chameleon.io/introduction
+    baseURL: https://fast.chameleon.io
+    tags:
+      - JavaScript
+      - SDK
+      - Client-Side
+      - User Identification
+      - Event Tracking
+    properties:
+      - type: Documentation
+        url: https://developers.chameleon.io/introduction
+
+  - name: Chameleon Webhooks
+    description: >
+      Outgoing webhooks that deliver real-time event notifications when users
+      interact with Chameleon experiences such as completing tours, submitting
+      survey responses, or dismissing modals. Chameleon delivers webhook payloads
+      from four static IP addresses for allowlisting.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developers.chameleon.io/introduction
+    baseURL: https://api.chameleon.io
+    tags:
+      - Webhooks
+      - Real-Time
+      - Events
+      - Notifications
+    properties:
+      - type: Documentation
+        url: https://developers.chameleon.io/introduction
+
+common:
+  - type: Website
+    url: https://www.chameleon.io/
+  - type: Documentation
+    url: https://developers.chameleon.io/introduction
+  - type: GitHubOrg
+    url: https://github.com/chamaeleonidae
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/chameleon-io
+  - type: Blog
+    url: https://www.chameleon.io/blog
+  - type: Pricing
+    url: https://www.chameleon.io/pricing
+  - type: StatusPage
+    url: https://status.chameleon.io/
+  - type: X
+    url: https://x.com/trychameleon
+  - type: Plans
+    url: plans/chameleon-co-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/chameleon-co-rate-limits.yml
+  - type: FinOps
+    url: finops/chameleon-co-finops.yml
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

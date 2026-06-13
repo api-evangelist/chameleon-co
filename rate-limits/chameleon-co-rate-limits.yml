@@ -1,0 +1,56 @@
+name: Chameleon Rate Limits
+description: >
+  Rate limiting information for the Chameleon REST API (api.chameleon.io v3).
+  Chameleon also provides experience-level rate limiting through Rate Limit Groups
+  in the dashboard, which controls how frequently individual users see specific
+  experiences — separate from API call limits.
+specificationVersion: "0.1"
+url: https://developers.chameleon.io/concepts/authentication
+
+api:
+  baseURL: https://api.chameleon.io
+  version: v3
+  authentication:
+    type: secret-token
+    methods:
+      - header: X-Account-Secret
+      - queryParameter: account_secret
+      - requestBody: account_secret
+    note: Tokens are account-specific and can only be downloaded once from https://app.chameleon.io/settings/tokens
+
+limits:
+  - name: API Rate Limits
+    description: >
+      Specific API request rate limits are not publicly documented by Chameleon.
+      Customers should contact Chameleon support for their account-specific limits.
+      Standard RESTful API best practices apply — avoid burst requests and implement
+      exponential backoff on 429 responses.
+    type: requests
+    window: null
+    limit: null
+    note: Contact support at help.chameleon.io for account-specific rate limit details
+
+  - name: Experience Rate Limit Groups
+    description: >
+      Chameleon provides in-dashboard Rate Limit Groups for controlling how frequently
+      users see specific experiences (tours, tooltips, microsurveys, launchers).
+      These are separate from API call limits and are managed at
+      https://app.chameleon.io under Experience settings.
+    type: experience-frequency
+    configurable: true
+    managedVia: https://app.chameleon.io
+    helpArticle: https://help.chameleon.io/en/articles/3513345-using-rate-limits-to-manage-experiences-frequency
+
+pagination:
+  type: cursor-based
+  description: >
+    The Chameleon REST API uses cursor-based pagination to handle large result sets.
+    Responses include pagination cursors to retrieve subsequent pages.
+  expandParameter: expand
+
+webhooks:
+  deliveryIPs:
+    description: Chameleon delivers webhooks from four static IP addresses for allowlisting
+    note: Specific IPs available from Chameleon documentation or support
+  retryPolicy:
+    description: Standard webhook retry behavior on failed deliveries

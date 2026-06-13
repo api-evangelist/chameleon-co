@@ -1,0 +1,122 @@
+name: Chameleon FinOps Framework
+description: >
+  FinOps cost management reference for Chameleon in-product guidance platform.
+  Costs are primarily driven by Monthly Tracked Users (MTUs) — active users who
+  encounter Chameleon experiences in a given month. Plan selection and MTU tier
+  management are the primary cost optimization levers.
+specificationVersion: "1.0"
+url: https://www.chameleon.io/pricing
+
+focus:
+  provider: Chameleon
+  service: In-Product Guidance Platform
+  website: https://www.chameleon.io/
+  pricingPage: https://www.chameleon.io/pricing
+
+billingModel:
+  type: subscription
+  period: monthly
+  annualDiscountAvailable: true
+  primaryCostDriver: Monthly Tracked Users (MTUs)
+  description: >
+    Chameleon bills on a per-seat subscription basis with MTU tiers determining
+    plan eligibility and overage costs. Annual billing provides cost savings vs
+    month-to-month pricing.
+
+costDimensions:
+  - dimension: Monthly Tracked Users (MTUs)
+    description: >
+      An MTU is any user who is active in your product and potentially encounters
+      a Chameleon experience during a calendar month. MTU count determines your
+      plan tier and potential overage charges.
+    unit: users/month
+    tier: plan-dependent
+    optimizationTip: >
+      Audit which user segments are being tracked. Exclude internal users,
+      staging/test environments, and bots from MTU counts using Chameleon's
+      environment separation feature.
+
+  - dimension: Seats
+    description: Number of team members with access to the Chameleon dashboard
+    unit: seats
+    limits:
+      startup: 6
+      growth: 15
+      enterprise: unlimited
+
+  - dimension: Environments
+    description: >
+      Separate environments for production, staging, and development. More
+      environments enable cleaner testing workflows.
+    unit: environments
+    limits:
+      startup: 2
+      growth: 4
+      enterprise: unlimited
+
+plans:
+  - name: Startup
+    annualCost: 4000
+    monthlyCost: 333
+    currency: USD
+    recommendedFor: Teams under 2,000 monthly active users in early growth stage
+
+  - name: Growth
+    annualCost: null
+    monthlyCost: null
+    currency: USD
+    note: Pricing on request; estimated from $999/month. Contact sales for MTU-based quote.
+    recommendedFor: Scaling SaaS teams with 2,000-50,000+ MTUs needing A/B testing and integrations
+
+  - name: Enterprise
+    annualCost: null
+    monthlyCost: null
+    currency: USD
+    note: Custom pricing negotiated with sales based on MTU volume and feature requirements
+    recommendedFor: Large organizations requiring SSO, advanced security, custom SLAs, and dedicated support
+
+costOptimizationStrategies:
+  - strategy: Right-size MTU tier
+    description: >
+      Monitor MTU consumption monthly to ensure you are not paying for unused headroom.
+      Downgrade plans if MTU count drops or upgrade proactively before overage charges trigger.
+    priority: high
+
+  - strategy: Annual billing
+    description: >
+      Commit to annual billing to reduce costs compared to month-to-month pricing.
+      Chameleon's Startup plan is $333/month billed annually vs higher month-to-month rates.
+    priority: high
+
+  - strategy: Environment hygiene
+    description: >
+      Keep staging and development environments separate to avoid inflating production MTU counts.
+      Use the 2-4 environments included in each plan for this purpose.
+    priority: medium
+
+  - strategy: Segment targeting
+    description: >
+      Use Chameleon's segmentation to show experiences only to relevant user cohorts,
+      reducing unnecessary experience triggers and improving ROI per MTU.
+    priority: medium
+
+  - strategy: Experience audit
+    description: >
+      Regularly audit and archive unused or low-performing tours, tooltips, and microsurveys
+      to simplify management and keep the experience library lean.
+    priority: low
+
+tagging:
+  recommendations:
+    - Tag environments (production, staging, dev) for cost attribution
+    - Track MTU counts per product line if running multiple products
+    - Attribute Chameleon costs to product or growth team budget centers
+
+monitoring:
+  dashboardURL: https://app.chameleon.io/
+  statusPage: https://status.chameleon.io/
+  metrics:
+    - MTUs consumed vs plan limit
+    - Active experiences by type
+    - Survey response rates
+    - Tour completion rates
