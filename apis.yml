@@ -11,7 +11,7 @@ description: >
   Tracked Users (MTUs), with deep integrations for Segment, Amplitude, Mixpanel,
   and other product analytics tools.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/chameleon-co/refs/heads/main/apis.yml
 created: 2026-06-13
 modified: 2026-06-13
@@ -36,7 +36,7 @@ apis:
       segmentation, experience delivery, survey response retrieval, and webhook
       configuration. Authenticates via account secret token passed as a header,
       query parameter, or request body field.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developers.chameleon.io/introduction
     baseURL: https://api.chameleon.io
     tags:
@@ -57,7 +57,7 @@ apis:
       triggering experiences programmatically, and passing personalization variables
       to Chameleon from the browser. Enables single-page app integration and custom
       event-based experience triggering.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developers.chameleon.io/introduction
     baseURL: https://fast.chameleon.io
     tags:
@@ -76,7 +76,7 @@ apis:
       interact with Chameleon experiences such as completing tours, submitting
       survey responses, or dismissing modals. Chameleon delivers webhook payloads
       from four static IP addresses for allowlisting.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developers.chameleon.io/introduction
     baseURL: https://api.chameleon.io
     tags:
