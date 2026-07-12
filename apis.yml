@@ -89,6 +89,10 @@ apis:
         url: https://developers.chameleon.io/introduction
 
 common:
+  - type: TrustCenter
+    url: security/chameleon-co-trust-center.yml
+  - type: DomainSecurity
+    url: security/chameleon-co-domain-security.yml
   - type: Website
     url: https://www.chameleon.io/
   - type: Documentation
